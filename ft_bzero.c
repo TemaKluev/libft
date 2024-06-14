@@ -1,25 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: artemkliuiev <artemkliuiev@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 18:59:56 by akliuiev          #+#    #+#             */
-/*   Updated: 2024/06/14 21:38:56 by artemkliuie      ###   ########.fr       */
+/*   Created: 2024/06/14 21:39:16 by artemkliuie       #+#    #+#             */
+/*   Updated: 2024/06/14 22:30:25 by artemkliuie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *memset(void *s, int c, size_t n)
-{
-	int	i;
+// #include <stdio.h>
+// #include <stdlib.h>
 
-	while (i <= n)
+void ft_bzero(void *s, size_t n)
+{
+	char	*str;
+
+	str = (char *)s;
+	while (n > 0)
 	{
-		s[i] = c;
-		i++;
+		n--;
+		str[n] = '\0';
 	}
-	return (s);
+	// int i;
+
+	// i = 0;
+	// while (i < 19){
+	// 	printf ("%c", str[i]);
+	// 	i++;
+	// }
+}
+
+
+
+int main (void)
+{
+	char *c = malloc(20); 
+	int i = 19;
+	while (i)
+	{
+		i--;
+		c[i] = 'a';
+	}
+	c[19] = '\0';
+	//char *c = "ncvreivnisdvaosmvcowenw";
+
+	printf("1\n");
+
+	ft_bzero(c, 10);
 }
