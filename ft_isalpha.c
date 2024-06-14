@@ -6,16 +6,16 @@
 /*   By: akliuiev <akliuiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 18:59:56 by akliuiev          #+#    #+#             */
-/*   Updated: 2024/06/13 20:41:13 by akliuiev         ###   ########.fr       */
+/*   Updated: 2024/06/14 23:31:22 by akliuiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalpha (char c)
+int	ft_isalpha(char c)
 {
-    if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-        return (1);
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1);
     else
         return (0);
 }
@@ -31,9 +31,3 @@ int main (void)
     else
         printf ("no\n");
 }
-
-
-
-
-
-
