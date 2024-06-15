@@ -1,45 +1,57 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akliuiev <akliuiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 18:59:56 by akliuiev          #+#    #+#             */
-/*   Updated: 2024/06/15 21:51:07 by akliuiev         ###   ########.fr       */
+/*   Created: 2024/06/15 22:03:57 by akliuiev          #+#    #+#             */
+/*   Updated: 2024/06/15 22:17:04 by akliuiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// #include <stdio.h>
-// #include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-void	*memset(void *s, int c, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*str;
+	char	*d;
+	char	*s;
+	char	*t;
+	size_t	i;
 
-	str = (char *)s;
+	i = n;
+	t = (char *)malloc(n);
+	d = (char *)dest;
+	s = (char *)src;
 	while (n)
 	{
 		n--;
-		str[n] = c;
+		t[n] = s[n];
+	}
+	while (i)
+	{
+		i--;
+		d[i] = t[i];
 	}
 
-	// int i;
+	int num;
 
-	// i = 0;
-	// while (i < 19){
-	// 	printf ("%d", str[i]);
-	// 	i++;
-	// }
-	// printf ("\n");
-	return (s);
+	num = 0;
+	while (num < 19){
+		printf ("%d", d[num]);
+		num++;
+	}
+	printf ("\n");
+	
+	return (dest);
 }
 
 int main (void)
 {
-	char *c = malloc(20); 
+	char *c = malloc(20);
 	int i = 19;
 	while (i)
 	{
@@ -50,7 +62,7 @@ int main (void)
 
 	printf("1\n");
 
-	memset(c, 9, 10);
+	ft_memmove(c, "cfsdavfawecfsdbvrtafe", 10);
 
 	i = 0;
 	while (i < 19){

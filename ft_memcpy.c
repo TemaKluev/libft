@@ -1,51 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akliuiev <akliuiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/14 21:39:16 by artemkliuie       #+#    #+#             */
-/*   Updated: 2024/06/15 21:47:12 by akliuiev         ###   ########.fr       */
+/*   Created: 2024/06/15 21:39:07 by akliuiev          #+#    #+#             */
+/*   Updated: 2024/06/15 21:51:09 by akliuiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void *ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char	*str;
+	char	*d;
+	char	*s;
 
-	str = (char *)s;
+	if (!src && !dest)
+		return (dest);
+	d = (char *)dest;
+	s = (char *)src;
 	while (n)
 	{
 		n--;
-		str[n] = '\0';
+		d[n] = s[n];
 	}
-	// int i;
-
-	// i = 0;
-	// while (i < 19){
-	// 	printf ("%c", str[i]);
-	// 	i++;
-	// }
-}
-
-#include <stdio.h>
-#include <stdlib.h>
-
-int main (void)
-{
-	char *c = malloc(20); 
-	int i = 19;
-	while (i)
-	{
-		i--;
-		c[i] = 'a';
-	}
-	c[19] = '\0';
-
-	printf("1\n");
-
-	ft_bzero(c, 10);
+	return (dest);
 }
