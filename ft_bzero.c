@@ -3,19 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: artemkliuiev <artemkliuiev@student.42.f    +#+  +:+       +#+        */
+/*   By: akliuiev <akliuiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 21:39:16 by artemkliuie       #+#    #+#             */
-/*   Updated: 2024/06/14 22:30:25 by artemkliuie      ###   ########.fr       */
+/*   Updated: 2024/06/15 20:56:12 by akliuiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// #include <stdio.h>
-// #include <stdlib.h>
-
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	char	*str;
 
@@ -34,7 +31,8 @@ void ft_bzero(void *s, size_t n)
 	// }
 }
 
-
+#include <stdio.h>
+#include <stdlib.h>
 
 int main (void)
 {
@@ -46,7 +44,6 @@ int main (void)
 		c[i] = 'a';
 	}
 	c[19] = '\0';
-	//char *c = "ncvreivnisdvaosmvcowenw";
 
 	printf("1\n");
 
