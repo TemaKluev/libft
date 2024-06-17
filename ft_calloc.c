@@ -6,7 +6,7 @@
 /*   By: artemkliuiev <artemkliuiev@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 17:43:12 by akliuiev          #+#    #+#             */
-/*   Updated: 2024/06/17 19:15:53 by artemkliuie      ###   ########.fr       */
+/*   Updated: 2024/06/17 21:29:04 by artemkliuie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,6 @@ void *ft_calloc(size_t nmemb, size_t size)
 	ptr = malloc(nmemb * size);
 	if (ptr == NULL)
 		return (NULL);
-	while (size)
-	{
-		size--;
-		ptr[size] = '\0';
-	}
+	ft_bzero (ptr, size);
 	return (ptr);
 }
