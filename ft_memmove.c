@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akliuiev <akliuiev@student.42.fr>          +#+  +:+       +#+        */
+/*   By: artemkliuiev <artemkliuiev@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 22:03:57 by akliuiev          #+#    #+#             */
-/*   Updated: 2024/06/15 22:17:04 by akliuiev         ###   ########.fr       */
+/*   Updated: 2024/06/25 00:05:38 by artemkliuie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	num = 0;
 	while (num < 19){
-		printf ("%d", d[num]);
+		printf ("%c", d[num]);
 		num++;
 	}
 	printf ("\n");
