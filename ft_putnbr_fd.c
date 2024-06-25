@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: artemkliuiev <artemkliuiev@student.42.f    +#+  +:+       +#+        */
+/*   By: akliuiev <akliuiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:56:02 by akliuiev          #+#    #+#             */
-/*   Updated: 2024/06/25 00:23:41 by artemkliuie      ###   ########.fr       */
+/*   Updated: 2024/06/25 22:08:56 by akliuiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	ft_putnbr_fd(int n, int fd)
 		if (n == -2147483648)
 		{
 			ft_putstr_fd ("-2147483648", fd);
-			return;
+			return ;
 		}
 		ft_putchar_fd ('-', fd);
 		n = -n;

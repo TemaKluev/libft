@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: artemkliuiev <artemkliuiev@student.42.f    +#+  +:+       +#+        */
+/*   By: akliuiev <akliuiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 17:43:12 by akliuiev          #+#    #+#             */
-/*   Updated: 2024/06/24 23:48:59 by artemkliuie      ###   ########.fr       */
+/*   Updated: 2024/06/25 22:00:57 by akliuiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char 	*str;
+	char	*str;
 	size_t	i;
 
 	str = (char *)s;

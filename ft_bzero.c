@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: artemkliuiev <artemkliuiev@student.42.f    +#+  +:+       +#+        */
+/*   By: akliuiev <akliuiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 21:39:16 by artemkliuie       #+#    #+#             */
-/*   Updated: 2024/06/24 22:48:00 by artemkliuie      ###   ########.fr       */
+/*   Updated: 2024/06/25 22:04:02 by akliuiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,12 @@ void	ft_bzero(void *s, size_t n)
 		n--;
 		str[n] = '\0';
 	}
-	int i;
-
-	i = 0;
-	while (i < 19){
-		printf ("%c", str[i]);
-		i++;
-	}
 }
 
-int main (void)
+int	main(void)
 {
-	char *c = malloc(20); 
-	int i = 19;
+	char	*c = malloc(20); 
+	int		i = 19;
 	while (i)
 	{
 		i--;

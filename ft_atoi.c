@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: artemkliuiev <artemkliuiev@student.42.f    +#+  +:+       +#+        */
+/*   By: akliuiev <akliuiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 17:43:12 by akliuiev          #+#    #+#             */
-/*   Updated: 2024/06/24 22:43:09 by artemkliuie      ###   ########.fr       */
+/*   Updated: 2024/06/25 21:54:59 by akliuiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include <stdio.h>
 
-int ft_atoi(const char *s)
+int	ft_atoi(const char *s)
 {
 	int	i;
 	int	sign;
@@ -40,9 +40,9 @@ int ft_atoi(const char *s)
 	return (k * sign);
 }
 
-int main (void)
+int	main(void)
 {
-	char *s;
+	char	*s;
 
 	s = "-589452346";
 	printf("%d\n", ft_atoi(s));

@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: artemkliuiev <artemkliuiev@student.42.f    +#+  +:+       +#+        */
+/*   By: akliuiev <akliuiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 17:43:12 by akliuiev          #+#    #+#             */
-/*   Updated: 2024/06/25 00:50:48 by artemkliuie      ###   ########.fr       */
+/*   Updated: 2024/06/25 22:10:52 by akliuiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include "libft.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
@@ -32,7 +33,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	return (str);
 }
 
-int words_count(const char *s, int c)
+int	words_count(const char *s, int c)
 {
 	int	i;
 	int	num;
@@ -53,7 +54,7 @@ int words_count(const char *s, int c)
 	return (num);
 }
 
-int word_len(const char *s, char c)
+int	word_len(const char *s, char c)
 {
 	int	i;
 
@@ -63,7 +64,7 @@ int word_len(const char *s, char c)
 	return (i);
 }
 
-void free_all(char **str, int i)
+void	free_all(char **str, int i)
 {
 	while (i >= 0)
 	{
@@ -73,7 +74,7 @@ void free_all(char **str, int i)
 	free (str);
 }
 
-char **ft_div(const char *s, char c, char **str, int num)
+char	**ft_div(const char *s, char c, char **str, int num)
 {
 	int	i;
 	int	j;
@@ -84,7 +85,7 @@ char **ft_div(const char *s, char c, char **str, int num)
 	{
 		while (s[i] != '\0' && s[i] == c)
 			i++;
-		str[j] = ft_substr(str[j], s[i], word_len(&s[i], c));
+		str[j] = ft_substr(s, i, word_len(&s[i], c));
 		if (str[j] == NULL)
 		{
 			free_all(str, j);
@@ -96,13 +97,13 @@ char **ft_div(const char *s, char c, char **str, int num)
 	}
 	str[j] = NULL;
 	return (str);
- }
+}
 
 char	**ft_split(const char *s, char c)
 {
 	int		num;
 	char	**str;
-	
+
 	if (s == NULL)
 		return (NULL);
 	num = words_count(s, c);
@@ -113,12 +114,10 @@ char	**ft_split(const char *s, char c)
 	return (str);
 }
 
-#include <stdio.h>
-
 int main(void)
 {
     // Test case 1
-    const char *str1 = "Hello,world,this,is,a,test";
+    const char *str1 = "Hello,,,,,,,world,this,is,a,test";
     char **result1 = ft_split(str1, ',');
 
     // Print the result of test case 1

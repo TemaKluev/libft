@@ -6,7 +6,7 @@
 /*   By: akliuiev <akliuiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 18:59:56 by akliuiev          #+#    #+#             */
-/*   Updated: 2024/06/15 20:54:14 by akliuiev         ###   ########.fr       */
+/*   Updated: 2024/06/25 19:57:16 by akliuiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ int main (void)
 {
 	char *str = "cvarnejcvnsd";
 
-	printf ("%d", ft_strlen(str));
+	printf ("%ld", ft_strlen(str));
 }
