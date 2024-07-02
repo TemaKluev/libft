@@ -6,12 +6,11 @@
 /*   By: akliuiev <akliuiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 17:43:12 by akliuiev          #+#    #+#             */
-/*   Updated: 2024/06/25 22:19:29 by akliuiev         ###   ########.fr       */
+/*   Updated: 2024/06/25 23:43:53 by akliuiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -28,22 +27,5 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 			return (str1[i] - str2[i]);
 		i++;
 	}
-	return (0);
-}
-
-int main(void)
-{
-	char *string1 = "hello";
-	char *string2 = "helo";
-	int res = ft_memcmp(string1, string2, sizeof(string1));
-
-    int i = 100;
-    int j = 111;
-
-    int res2 = ft_memcmp(&i, &j, sizeof(i));
-
-	printf("%d\n", res);
-    printf("%d\n", res2);
-
 	return (0);
 }

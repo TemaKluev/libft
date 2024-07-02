@@ -6,7 +6,7 @@
 /*   By: akliuiev <akliuiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 21:39:07 by akliuiev          #+#    #+#             */
-/*   Updated: 2024/06/25 22:03:00 by akliuiev         ###   ########.fr       */
+/*   Updated: 2024/06/25 23:45:02 by akliuiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,4 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		d[n] = s[n];
 	}
 	return (dest);
-}
-
-#include <stdio.h>
-#include <string.h>
-
-int main(void)
-{
-	const char *src = "HELLLO";
-	char *dst;
-
-	dst = malloc(sizeof(char) * 10);
-	printf("%s\t%s\n", src, dst);
-	ft_memcpy(dst, src, 6);
-	printf("%s\t%s\n", src, dst);
-
-	return (0);
 }

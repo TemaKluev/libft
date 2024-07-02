@@ -6,16 +6,15 @@
 /*   By: akliuiev <akliuiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 17:43:12 by akliuiev          #+#    #+#             */
-/*   Updated: 2024/06/25 22:00:11 by akliuiev         ###   ########.fr       */
+/*   Updated: 2024/06/26 00:48:15 by akliuiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	num_size(int n)
+unsigned int	num_size(int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	if (n == 0)
@@ -23,46 +22,39 @@ int	num_size(int n)
 	if (n < 0)
 	{
 		i++;
-		n = n * -1;
 	}
-	while (n > 9)
+	while (n != 0)
 	{
 		n = n / 10;
 		i++;
 	}
-	i++;
 	return (i);
 }
 
 char	*ft_itoa(int n)
 {
-	int		size;
-	char	*num;
+	char			*num;
+	unsigned int	size;
+	unsigned int	nb;
 
 	size = num_size(n);
-	num = malloc(sizeof (char) * (size + 1));
+	num = malloc(sizeof(char) * (size + 1));
 	if (num == NULL)
 		return (NULL);
 	num[size] = '\0';
 	if (n < 0)
 	{
 		num[0] = '-';
-		n = -n;
+		nb = (unsigned int)(-n);
 	}
+	else
+		nb = (unsigned int)n;
 	if (n == 0)
-		num[0] = 0;
-	while (n)
+		num[0] = '0';
+	while (nb != 0)
 	{
-		size--;
-		num[size] = (n % 10) + '0';
-		n = n / 10;
+		num[--size] = (nb % 10) + '0';
+		nb = nb / 10;
 	}
 	return (num);
-}
-
-int main(void)
-{
-	int i = +41385941;
-
-	printf("%s", ft_itoa(i));
 }

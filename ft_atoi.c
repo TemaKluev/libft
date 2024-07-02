@@ -6,13 +6,11 @@
 /*   By: akliuiev <akliuiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 17:43:12 by akliuiev          #+#    #+#             */
-/*   Updated: 2024/06/25 21:54:59 by akliuiev         ###   ########.fr       */
+/*   Updated: 2024/06/25 23:41:31 by akliuiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_atoi(const char *s)
 {
@@ -38,12 +36,4 @@ int	ft_atoi(const char *s)
 		i++;
 	}
 	return (k * sign);
-}
-
-int	main(void)
-{
-	char	*s;
-
-	s = "-589452346";
-	printf("%d\n", ft_atoi(s));
 }

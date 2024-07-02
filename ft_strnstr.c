@@ -6,12 +6,11 @@
 /*   By: akliuiev <akliuiev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 17:43:12 by akliuiev          #+#    #+#             */
-/*   Updated: 2024/06/25 22:16:26 by akliuiev         ###   ########.fr       */
+/*   Updated: 2024/06/25 23:49:01 by akliuiev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strnstr(const char *hs, const char *nd, size_t n)
 {
@@ -33,13 +32,4 @@ char	*ft_strnstr(const char *hs, const char *nd, size_t n)
 		i++;
 	}
 	return (NULL);
-}
-
-int main(void)
-{
-	const char str[20] = "hello everyone\n";
-	const char *small_str = "everyone";
-	char *ptr = ft_strnstr(str, small_str, sizeof(str));
-	printf("%s", ptr);
-	return (0);
 }
